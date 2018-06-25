@@ -43,7 +43,6 @@ class HighLow
     FillList();
     Random rnd = new Random();
     _computerNumber = rnd.Next(1, 101);
-    Console.WriteLine(_computerNumber);
     while(true)
     {
       Console.WriteLine("What do you think the secret number is?");
@@ -72,9 +71,7 @@ class HighLow
     while(true)
     {
       _guess = _range[(_range.Count - 1) / 2];
-      Console.WriteLine(_guess);
-      Console.WriteLine(_range.Count);
-      Console.WriteLine("Is your number higher or lower than {0}? (Lower, Higher, Correct)", _guess);
+      Console.WriteLine("Is your number higher or lower than {0}? (Lower, Higher)", _guess);
       _userResponse = Console.ReadLine();
       if (_range.Count - 1 == 1)
       {
